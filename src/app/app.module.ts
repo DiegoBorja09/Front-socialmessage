@@ -10,6 +10,7 @@ import { LoginComponent } from './page/login/login.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { AllmessageComponent } from './page/allmessage/allmessage.component';
 import { MymessageComponent } from './page/mymessage/mymessage.component';
+import { CreateMessageComponent } from './page/create-message/create-message.component';
 
 
 
@@ -22,6 +23,7 @@ import { MymessageComponent } from './page/mymessage/mymessage.component';
     ProfileComponent,
     AllmessageComponent,
     MymessageComponent,
+    CreateMessageComponent,
 
     
   ],
