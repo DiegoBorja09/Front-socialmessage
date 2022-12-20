@@ -1,45 +1,45 @@
 
-  <section class="vh-100" >
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-xl-10">
-                <div class="card" style="border-radius: 1rem;background-color: rgb(255, 255, 255);">
-                    <div class="row g-0">
-                        <div class="col-md-6 col-lg-6 d-none d-md-block">
-                            <img width="100%" height="100%" alt="Angular Logo" src="../../../assets/unable-to-send-message-message-blocking-is-active.jpg"
-                                style="border-radius: 1rem 0 0 1rem; " />
-                        </div>
-                        <div class="col-md-6 col-lg-6 d-flex align-items-center">
-                            <div class="card-body p-4 p-lg-5 text-black">
-
-                                <form action="">
-                                    <div class="form-group">
-
-                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;color: #000000;">
-                                          Create Message</h5>
-
-
-                                          <div class="form-outline form-white mb-4">
-                
-                                            <input type="text" class="form-control " placeholder="Title" [(ngModel)]="message.title"/>
-                                            
-                                          </div>
-                            
-                                          <div class="form-outline form-white mb-4">
-                                            <textarea name="contents"class="form-control" rows="9" placeholder="Message Content" [(ngModel)]="message.contents"></textarea>
-                                            
-                                          </div>
-                            
-                            
-                                          <button (click)="save()" class="btn btn-outline-info btn-lg px-5" type="submit">SUBMIT</button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;background-color: rgb(255, 255, 255);">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-6 d-none d-md-block">
+              <img width="100%" height="100%" alt="Angular Logo"
+                src="../../../assets/How-to-Reply-to-a-Specific-Message-on-Instagram.jpg"
+                style="border-radius: 1rem 0 0 1rem; " />
             </div>
+            <div class="col-md-6 col-lg-6 d-flex align-items-center">
+              <div class="card-body  text-black text-center">
+
+
+                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;color: #000000;">Sign
+                  Create Message</h5>
+
+
+                <div class="form-outline form-white mb-4">
+
+                  <input type="text" class="form-control " placeholder="Title" [(ngModel)]="message.title" />
+
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                  <textarea name="contents" class="form-control" rows="9" placeholder="Message Content"
+                    [(ngModel)]="message.contents"></textarea>
+
+                </div>
+
+
+                <button (click)="save()" class="btn btn-outline-info btn-lg px-5 " type="submit">SUBMIT</button>
+
+
+
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
