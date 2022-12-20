@@ -13,7 +13,7 @@ export class MessageservicesService {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  url = "http://localhost:4000/message/";
+  url = "https://backdiego-production.up.railway.app/message/";
 
 
   

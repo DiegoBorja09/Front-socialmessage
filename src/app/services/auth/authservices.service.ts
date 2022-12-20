@@ -14,7 +14,7 @@ export class AuthservicesService {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  url = "http://localhost:4000/auth";
+  url = "https://backdiego-production.up.railway.app/auth";
 
   get user$(): Observable<User> {
     return this.user.asObservable();
