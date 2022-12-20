@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthservicesService } from './services/auth/authservices.service';
 
@@ -9,9 +9,14 @@ import { AuthservicesService } from './services/auth/authservices.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(private router:Router, private service:AuthservicesService){}
+  navOpen=false;
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
+  
   Login(){
     this.router.navigate(["login"])
   }
@@ -23,5 +28,14 @@ export class AppComponent {
 
   logout(){
     return this.service.logOut();
+  }
+
+  OpenNavbar(){
+    if(this.navOpen){
+      this.navOpen=false;
+    }else{
+      this.navOpen=true;
+    }
+
   }
 }

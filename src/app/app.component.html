@@ -2,50 +2,53 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Container wrapper -->
     <div class="container-fluid">
-        <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        <button class="navbar-toggler" type="button" (click)="OpenNavbar()" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
 
         <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show':navOpen}">
             <!-- Navbar brand -->
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
                 <span style="color:rgba(38, 38, 38, 0.713)">Wires</span>
             </a>
-            <!-- Left links -->
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" *ngIf="session_Active()">
-                    <a class="nav-link" routerLink="/profile">Profile</a>
+                    <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
                 </li>
                 <li class="nav-item" *ngIf="session_Active()">
-                    <a class="nav-link" routerLink="/mymessage">My Message</a>
+                    <a class="nav-link" routerLink="/mymessage" routerLinkActive="active">My Message</a>
                 </li>
                 <li class="nav-item" *ngIf="session_Active()">
-                    <a class="nav-link" routerLink="/allmessage">All Message</a>
+                    <a class="nav-link" routerLink="/allmessage" routerLinkActive="active">All Message</a>
                 </li>
                 <li class="nav-item" *ngIf="session_Active()">
-                    <a class="nav-link" routerLink="/create">Create Message</a>
+                    <a class="nav-link" routerLink="/create" routerLinkActive="active">Create Message</a>
                 </li>
             </ul>
-            <!-- Left links -->
 
-            
+
+
         </div>
         <div class="d-flex align-items-center">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" *ngIf="!session_Active()"><a class="nav-link"  routerLink="/login"><img src="../assets/log-in-sharp.svg" alt=""></a></li>
-                <li class="nav-item"*ngIf="session_Active() "><a class="nav-link"  (click)="logout()"><img src="../assets/Off_font_awesome.png" alt="" width="21"></a></li>
+                <li class="nav-item" *ngIf="!session_Active()"><a class="nav-link" routerLink="/login"><img
+                            src="../assets/log-in-sharp.svg" alt=""></a></li>
+                <li class="nav-item" *ngIf="session_Active() "><a class="nav-link" (click)="logout()"><img
+                            src="../assets/Off_font_awesome.png" alt="" width="21"></a></li>
             </ul>
-           
+
         </div>
     </div>
 
 
 
 </nav>
+
+
 
 
 <router-outlet></router-outlet>

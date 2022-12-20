@@ -11,3 +11,5 @@ body{
 ::-webkit-scrollbar {
     display: none;
 }
+
+@import "/node_modules/bootstrap/dist/css/bootstrap.css"
